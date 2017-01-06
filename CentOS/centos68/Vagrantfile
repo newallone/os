@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define :centos_server do |host|
+    host.vm.box = "bento/centos-6.8" 
+#    host.vm.box_url = "https://atlas.hashicorp.com/bento/boxes/centos-6.8/versions/2.3.0/providers/virtualbox.box" 
+    host.vm.hostname = 'os68'
+    host.vm.network :private_network, ip: '192.168.68.2'
+    host.vm.provider :virtualbox do |vb|
+      vb.gui = true
+      vb.name = 'centos6.8_20161109'
+      vb.customize ["modifyvm", :id, "--memory", "5596", "--cpus", "6", "--ioapi                                                                                                              c", "on"]
+    end
+#    host.vm.provision :shell, :inline => $script
+  end
+
+end
