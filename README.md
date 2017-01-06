@@ -21,6 +21,8 @@ $ chown -R vagrant /home/vagrant/.ssh
 
 # ref
 
+https://github.com/CentOS/sig-cloud-instance-images/tree/CentOS-6.8/docker
+
 https://github.com/CentOS/CentOS-Dockerfiles
 
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
